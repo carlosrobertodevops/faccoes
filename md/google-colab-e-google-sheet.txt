@@ -1,0 +1,42 @@
+Para abrir arquivos do Google Planilhas no Google Colab com o pandas, você pode seguir os seguintes passos:
+
+1. **Instale a biblioteca gspread** que permite a interação dos trechos de código Python com as planilhas do Google¹:
+
+```python
+!pip install --upgrade gspread
+```
+
+2. **Autentique suas credenciais do Google** para acessar as planilhas existentes na sua conta¹. Ao executar o código abaixo, será exibido um link que leva ao login do Google. Realizando o login e aceitando os termos, é disponibilizado um código que deve ser inserido no campo Enter verification code¹.
+
+```python
+from google.colab import auth
+auth.authenticate_user()
+
+import gspread
+from oauth2client.client import GoogleCredentials
+
+gc = gspread.authorize(GoogleCredentials.get_application_default())
+```
+
+3. **Importe seu arquivo do Google Sheets** como uma planilha (spreadsheet). Neste caso, 'Planilha_teste' é o nome do arquivo salvo no Google Sheets⁴.
+
+```python
+worksheet = gc.open('Planilha_teste').sheet1
+```
+
+4. **Obtenha os dados da planilha** e converta-os em um DataFrame do pandas⁴.
+
+```python
+rows = worksheet.get_all_values()
+import pandas as pd
+df = pd.DataFrame.from_records(rows)
+```
+
+Lembre-se de substituir `'Planilha_teste'` pelo nome da sua planilha. Espero que isso ajude! Se você tiver mais perguntas, fique à vontade para perguntar.
+
+Origem: conversa com o Bing, 09/04/2024
+(1) Manipulação de planilhas com Google Colab, Google Sheets e Pandas. https://medium.com/@alisson.rlima/manipula%C3%A7%C3%A3o-de-planilhas-com-google-colab-google-sheets-e-pandas-6565a5a89826.
+(2) Manipulando dados do GSheet no Colab | by Daniel Sousa Amador | Medium. https://daniel-s-amador.medium.com/manipulando-dados-do-gsheet-no-colab-1d3f828018ce.
+(3) Analise DADOS do Google Sheets com Python usando Google COLAB - YouTube. https://www.youtube.com/watch?v=8vKvsLTLDzs.
+(4) Manipulando vários arquivos CSV com Python no Google Colab. https://medium.com/@gustavofcruzlima/manipulando-v%C3%A1rios-arquivos-csv-com-python-no-google-colab-ae062c8646f2.
+(5) undefined. https://colab.research.google.com/.

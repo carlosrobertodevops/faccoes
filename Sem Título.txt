@@ -1,0 +1,45 @@
+Carimbo de data/hora	
+Endereço de e-mail	
+Foto recente	
+Fotos das tatuagens	
+Nome completo	
+Vulgo ou Alcunha	
+Filiação	
+Data de nascimento	
+CPF	
+RG	
+Órgão expedidor	CNH	
+UF da CNH	
+Função na facção 	
+Área de atuação 	
+Área(s) que já atuou	
+BOs	
+Registro na SERIS como reeducando 	
+Período como reeducando (em caso de SIM)	
+Situação jurídica 	
+Alvo da SSPAL	
+Qual Operação foi Alvo	
+Ocorrências de destaque 	
+Pena em Presídio Federal	
+Qual Presídio e Estado	
+Endereço Atual	Endereço Anterior	
+Endereço de algum familiar	
+CEP	
+Latitude	
+Logitude	
+Tornozeleira	
+Redes Sociais	
+Registro de homízio	
+Informações de homízidio	
+Parentes no Crime	
+Informações de Parentes criminosos	
+Nome Completo do Conjugue	
+Tempo com o Conjugue	
+Tipos dos Bens	
+Descrição dos Bens	
+Observações	
+Qual à Facção
+Bairro Atual
+Cidade Atual
+UF Atual
+Tipo de Rede Social						
